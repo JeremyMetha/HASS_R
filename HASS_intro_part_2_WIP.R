@@ -15,7 +15,7 @@ works <- gutenberg_works() # a dataframe of information about project gutenberg 
 
 # load data from the web more generally
 
-trump %>%  <- read_csv("https://go.unimelb.edu.au/tt3r") # trump's tweeting habits circa late 2019 - early 2020 - stored as as .csv file on google drive
+trump <- read_csv("https://go.unimelb.edu.au/tt3r") # trump's tweeting habits circa late 2019 - early 2020 - stored as as .csv file on google drive
 imdb <- read_csv("https://go.unimelb.edu.au/p8is") # data from the internet movie database (IMDb) - another .csv on a google drive.
 
 
@@ -32,7 +32,7 @@ waroftheworlds <- gutenberg_download(36)
 
 #can also access data in specific columns with df$name
 
-trump %>% $text
+trump$text
 
 # finding key words
 
