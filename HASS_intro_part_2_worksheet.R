@@ -5,8 +5,10 @@ setwd()
 # today we'll be using a couple of libraries - if the below library calls don't work, install these with
 # install.packages("tidyverse")
 # install.packages("gutenbergr")
+# install.packages("tidytext")
 library(tidyverse)
 library(gutenbergr)
+library(tidytext)
 # dataframes
 
 # load data from packages
@@ -162,4 +164,19 @@ afinn <- get_sentiments("afinn")
 #  a) Using the example code above, calculate and plot sentiment scores over text sections for 4 of your favourite books in the gutenberg collection.
 
 ####
+
+
+
+# this is just the beginning!
+
+#install.packages("wordcloud")
+library(wordcloud)
+
+tidy_books %>%
+  anti_join(stop_words) %>%
+  count(word) %>%
+  with(wordcloud(word, n, max.words = 100))
+
+
+# https://www.tidytextmining.com/ for more examples and text topics
 
