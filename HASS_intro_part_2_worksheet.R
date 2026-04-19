@@ -110,7 +110,7 @@ good_mirror <- "http://mirror.csclub.uwaterloo.ca/gutenberg"
 
 
 
-# pre-bottled tf-idf visualisation using ggplot (come to Mar's visualisation session to learn more!)
+# pre-bottled tf-idf visualisation using ggplot 
 
 
 for_visualisation <- tf_idf %>%
