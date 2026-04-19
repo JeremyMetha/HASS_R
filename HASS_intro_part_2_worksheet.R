@@ -125,15 +125,13 @@ labs(x = "tf-idf", y = NULL, title = "Top 15 TF-IDF words across a corpus of boo
 theme(plot.title = element_text(hjust = 0.5)) # centering the title over the plots
 
 
-####
 # Challenge 6: Stop-words and TF-IDF
 
 #  a) Using the example code above, calculate and plot TF-IDF scores for works in the physics bookshelf of the gutenberg collection.
-#     To get you started physics <- filter(works, gutenberg_bookshelf == "Physics")$gutenberg_id will get you a vector of IDs to pass to gutenberg_download()
+#     To get you started physics <- filter(works, str_detect(gutenberg_bookshelf, pattern = "Physics"))$gutenberg_id will get you a vector of IDs to pass to gutenberg_download(), although you may wish to shortlist this somewhat 
 #     make sure to use the mirror from above too, as it seems to be the most reliable
 
 #  b) Compare this visualisation to the most common words found using the stop-word removal technique we used on the war of the world and paradise lost. How different are the two sets of words?
-
 ####
 
 # sentiment analysis
